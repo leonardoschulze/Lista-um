@@ -20,11 +20,10 @@
             //$resultado = 1;
             
             for($i = 1; $i <= $numero; $i++){
-                $resultado = $resultado + $i;
-                if($resultado == $numero){
-                    echo "Número Amigo";
-                }else{
-                    echo "Não é número amigo";
+                $resultado = $numero % $i;
+                if($resultado == 0){
+                    $soma = $i + $i ;
+                    echo "<br>", $soma;
                 };
             };
         };

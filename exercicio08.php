@@ -1,9 +1,11 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe Número</title>
 </head>
+
 <body>
 
     <form method="POST" action="">
@@ -13,22 +15,22 @@
     </form>
 
     <?php
-        if($_SERVER['REQUEST_METHOD']== 'POST'){
-            
-            if(isset($_POST['verificar']));
-            $numero = $_POST['numero'];
-            //$resultado = 1;
-            
-            for($i = 1; $i <= $numero; $i++){
-                $resultado = $resultado + $i;
-                if($resultado == $numero){
-                    echo "Número Amigo";
-                }else{
-                    echo "Não é número amigo";
-                };
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        if (isset($_POST['verificar']));
+        $numero = $_POST['numero'];
+        $count = 0;
+
+        for ($i = 1; $i <= $numero; $i++) {
+            $par = $i % 2;
+            if ($par == 0) {
+                $count = $count + 1;
             };
         };
+        echo "<br>", $count;
+    };
     ?>
-    
+
 </body>
+
 </html>
