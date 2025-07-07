@@ -17,15 +17,15 @@
             
             if(isset($_POST['verificar']));
             $numero = $_POST['numero'];
-            //$resultado = 1;
+            $count = 0;
             
             for($i = 1; $i <= $numero; $i++){
                 $resultado = $numero % $i;
                 if($resultado == 0){
-                    $soma = $i + $i ;
-                    echo "<br>", $soma;
+                    $count = $count + $i;
                 };
             };
+            echo "<br>", $count;
         };
     ?>
     
